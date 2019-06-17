@@ -12,8 +12,11 @@
  * \addtogroup LPC2478
  */
 /*@{*/
-
-#define NOINT			0xc0
+	
+//FIXME: why can't this .S use "#define ..."?
+noint:
+        .equ NOINT, 0xc0
+//#define NOINT			(0xc0)
 
 /*
  * rt_base_t rt_hw_interrupt_disable();

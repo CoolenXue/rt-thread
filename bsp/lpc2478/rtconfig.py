@@ -10,10 +10,13 @@ if os.getenv('RTT_CC'):
 
 if  CROSS_TOOL == 'gcc':
 	PLATFORM 	= 'gcc'
-	EXEC_PATH 	= 'E:/Program Files/CodeSourcery/Sourcery G++ Lite/bin'
+	#EXEC_PATH 	= 'E:/Program Files/CodeSourcery/Sourcery G++ Lite/bin'
+	EXEC_PATH 	= 'C:\Program Files (x86)\GNU Tools ARM Embedded\5.4 2016q3\bin'
 elif CROSS_TOOL == 'keil':
-	PLATFORM 	= 'armcc'
-	EXEC_PATH 	= 'C:/Keil'
+	#PLATFORM 	= 'armcc'
+	#EXEC_PATH 	= 'C:/Keil'
+	PLATFORM 	= 'gcc'
+	EXEC_PATH 	= 'C:\Program Files (x86)\GNU Tools ARM Embedded\5.4 2016q3\bin'
 elif CROSS_TOOL == 'iar':
     print('================ERROR============================')
     print('Not support iar yet!')

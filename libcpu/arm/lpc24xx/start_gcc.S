@@ -175,6 +175,11 @@ _rtthread_startup:
         .equ UNDEFMODE, 0x1b
         .equ MODEMASK,  0x1f
         .equ NOINT,             0xc0
+//FIXME: why can't this .S use "#define ..."?
+	.equ WDMOD,          (0xE0000000 + 0x00)
+	.equ VICIntEnClr,    (0xFFFFF000 + 0x014)
+	.equ VICVectAddr,    (0xFFFFF000 + 0xF00)
+	.equ VICIntSelect,   (0xFFFFF000 + 0x00C)
 
 /* exception handlers */
 vector_undef:   bl rt_hw_trap_udef
