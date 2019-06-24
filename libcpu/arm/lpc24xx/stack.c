@@ -56,6 +56,9 @@ rt_uint8_t *rt_hw_stack_init(void *tentry, void *parameter,
     else
         *(--stk) = SVCMODE;                 /* arm mode   */
 
+    /* spsr */
+    *(--stk) = SVCMODE;
+
     /* return task's current stack address */
     return (rt_uint8_t *)stk;
 }
